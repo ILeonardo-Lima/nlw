@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./imagens/Fundo.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+body *{
+    font-family: 'Inter', sans-serif  ;
+}
+
+ul{
+    list-style: none;
+}
+
+main{
+    max-width: 500px;
+    width: 90%;
+    margin: 0 auto 32px auto ;    
+    display: flex; /*or display grid*/
+    flex-direction: column;
+    gap: 24px;
+}
+
+main section{
+    animation: fromBottom .7s backwards;/*puxa a animaçao para a main*/
+}
+
+main section:nth-child(1){ /*nth-child seleciona ordem de prioridade das animações das tags filhas*/
+    animation-delay: .3s;/*Define tempo do atraso na animação*/
+}
+
+main section:nth-child(2){
+    animation-delay: .5s; /*Define tempo do atraso na animação*/
+}
+
+main section:nth-child(3){
+    animation-delay: .9s;/*Define tempo do atraso na animação*/
+}
+
+section{
+    color: white;
+    line-height: 160%;
+    background:linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div{
+    background-color: #2a2634;
+    padding: 32px;
+    padding-top: 20px;
+    border-radius: 8px;
+
+}
+
+section h2{
+    letter-spacing: -0.47px;
+}
+section p{
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /*Espaçamento entre as li, só funciona com display flex ou grid*/
+    margin-top: 24px;
+    
+}
+
+section ul li:hover{
+    transform: scale(1.1); /* faz a animação de aumento da imagen da header*/
+    transition: transform .3s;  /* faz a duração da animação de aumento da imagen da header*/
+}
+
+.games-list img{
+    width: 90px;
+    border-radius: 8px;
+
+}
+.channel-list img{
+    border-radius: 50%;
+    width: 70px;
+    border: 1px solid #443E54;
+}
+
+header{
+    margin-top: 32px;
+    height: calc(120px + 32px); /* faz o calculo da altura da header*/
+}
+
+header div{
+    width: 120px;
+    margin: auto;
+    background:linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    transition: transform .3s;  /* faz a duração da animação de aumento da imagen da header*/
+    animation: fromTop .7s .1s backwards;/*puxa a animaçao para a header*/
+} 
+
+header div:hover{
+    transform: scale(1.1); /* faz a animação de aumento da imagen da header*/
+}
+
+header div img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* Animação*/
+
+@keyframes fromTop{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom{
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
