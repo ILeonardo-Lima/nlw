@@ -115,8 +115,13 @@ header div img{
     width: 100%;
     border-radius: 50%;
 }
-ul class="channel-list"{
-    display: center;
+.channel-list {
+    list-style: none;       /* remove os marcadores */
+    padding: 0;             /* remove padding padrão */
+    margin: 0 auto;         /* centraliza o bloco da UL */
+    width: fit-content;     /* a UL só ocupa a largura necessária */
+    display: flex;          /* organiza os <li> em linha */
+    gap: 20px;              /* espaçamento entre os itens */
 }
 
 /* Animação*/
